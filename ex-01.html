@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso de HTML5, CSS3 e JavaScript</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style type="text/css">
+
+            /* ------NORMALIZAR O NAVEGADOR -------- */
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            /* O asterisco é um seletor universal = Pegue todas as Tags */
+            * {
+                box-sizing: border-box;
+            }
+
+            /* Estrutura CSS */
+            /* box-sizing */
+            /* box-model */
+            /* --------------------------------------*/
+
+            /*  aqui temos seletores CSS - Seletor de tag*/
+            div.container {
+                width: 100%;
+                height: 100vh; /* vh - Viewport height - pega a altura da area visivel do site*/
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.507);
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin: 0;
+                font-weight: 300;
+                font-family: 'Roboto', sans-serif;
+                color: #555;
+                
+            }
+
+            body>div>h1.titulo {
+                color: red;
+            }
+            /* Quanto mais especifico, mais importante. Ex= h1.titulo – ele tem uma tag e uma casse */
+            h1.titulo,
+            h2.titulo {
+                font-size: 4em;
+                color: white !important; /* !important  -  diz que não interessa o importante sou eu (evite usar) */
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            body {
+                background: url(assets/images/background-mobile.webp) no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+/* Daqui pra cima é tudo mobile */
+
+/* tablet - mediaquerie para largura começando em 768px */
+@media (min-width: 768px) {
+    /* tablet */
+    body {
+                background: url(assets/images/background-tablet.webp) no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+}
+
+@media (min-width: 1280px) {
+    /* desktop */
+    body {
+                background: url(assets/images/background-desktop.webp) no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+}
+
+/* 2520px - Extra Large - iMac 27" */
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="titulo">Seja bem vindo(a) ao curso de HTML5, CSS# e JavaScript</h1>
+            <h2 class="titulo">No momento o assunto é  <i>HTML</i> </h2>
+        </div>
+    </body>
+</html>
